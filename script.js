@@ -40,3 +40,32 @@ const add = (number1,number2) => {
 // 値もコンマ(,)で区切る
 add(5,7);
 // →12
+
+
+// 戻り値(関数の処理結果を呼び出し元で受け取る方法)
+const half = (number) => {
+  // 「return 値;」と書くことで、関数はその値を戻り値として返す
+  // numberを2で割った値を戻り値として返してください
+  return number / 2;
+};
+// 定数名resultを定義してください
+const result = half(130);
+// 「130の半分は〇〇です」となるように出力してください
+console.log("130の半分は" + result + "です");
+// 上記の定数を定義せずconsole.log("130の半分は" + half(130) + "です"); でも出力される
+// →130の半分は65です
+
+
+const check = (number) => {
+  // numberが3の倍数かどうかを戻り値として返してください
+  return number % 3 === 0;
+};
+// if文の条件式で、checkを呼び出してください
+if (check(123)) { // 注意! ifの時()でくくる 「;」はいらない
+  console.log("3の倍数です");
+  // console.log(check(123));→true
+} else {
+  console.log("3の倍数ではありません");
+  // console.log(check(123));→false
+}
+// →3の倍数です
