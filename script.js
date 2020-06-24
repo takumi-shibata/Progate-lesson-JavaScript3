@@ -69,3 +69,35 @@ if (check(123)) { // 注意! ifの時()でくくる 「;」はいらない
   // console.log(check(123));→false
 }
 // →3の倍数です
+
+
+// 関数演習
+const number1 = 103;
+const number2 = 72;
+const number3 = 189;
+
+// getMax関数を定義してください
+const getMax = (a,b,c) => {
+  // 引数a, b, cのうち一番大きい値を戻り値にしてください
+
+  // ①変数maxを定義しaを代入
+  let max = a
+  
+  // ②もしbがmaxより大きければ、bをmaxに代入
+  if (b > max) {
+    max = b
+  }
+
+  // ③もしcがmaxより大きければ、cをmaxに代入
+  if (c > max) {
+    max = c
+  }
+
+  // ④maxをreturnする
+  return max;
+}
+
+// 「最大値は○○です」と出力してください
+const max = getMax(number1,number2,number3); // getMax(103,72,189);
+console.log("最大値は" + max + "です");
+// →最大値は189です
